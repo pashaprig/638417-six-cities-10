@@ -1,4 +1,8 @@
-function MainScreen(): JSX.Element {
+type MainScreenProps = {
+  favoritesCount: number;
+}
+
+function MainScreen({favoritesCount}: MainScreenProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -16,7 +20,7 @@ function MainScreen(): JSX.Element {
                     <div className="header__avatar-wrapper user__avatar-wrapper">
                     </div>
                     <span className="header__user-name user__name">Oliver.conner@gmail.com</span>
-                    <span className="header__favorite-count">3</span>
+                    <span className="header__favorite-count">{favoritesCount}</span>
                   </a>
                 </li>
                 <li className="header__nav-item">
