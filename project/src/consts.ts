@@ -1,5 +1,10 @@
-const Setting = {
+export const Setting = {
   FAVORITES_COUNT: 9,
 };
 
-export {Setting};
+export enum AppRoute {
+  Main = '/',
+  Login = '/login',
+  Favorites = '/favorites',
+  Room = '/offer/:id'
+}
