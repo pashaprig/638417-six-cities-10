@@ -1,10 +1,7 @@
 import MainScreen from '../../pages/main-screen/main-screen';
+import { FavoritesProps } from '../../types';
 
-type AppScreenProps = {
-  favoritesCount: number;
-}
-
-function App({favoritesCount}: AppScreenProps): JSX.Element {
+function App({favoritesCount}: FavoritesProps): JSX.Element {
   return (
     <MainScreen favoritesCount={favoritesCount} />
   );

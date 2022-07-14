@@ -1,10 +1,7 @@
 import Card from '../../components/card/card';
+import { FavoritesProps } from '../../types';
 
-type MainScreenProps = {
-  favoritesCount: number;
-}
-
-function MainScreen({ favoritesCount }: MainScreenProps): JSX.Element {
+function MainScreen({ favoritesCount }: FavoritesProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
