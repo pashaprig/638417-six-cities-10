@@ -5,10 +5,17 @@ import LoginScreen from '../../pages/login-screen/login-screen';
 import MainScreen from '../../pages/main-screen/main-screen';
 import NotFoundScreen from '../../pages/not-found-screen/not-found-screen';
 import RoomScreen from '../../pages/room-screen/room-screen';
-import { FavoritesProps } from '../../types/types';
 import PrivateRoute from '../private-route/private-route';
+import { Offers } from '../../types/offer';
+import { Reviews } from '../../types/review';
 
-function App({ favoritesCount }: FavoritesProps): JSX.Element {
+type AppScreenProps = {
+  favoritesCount: number;
+  offers: Offers;
+  reviews: Reviews;
+}
+
+function App({ favoritesCount, offers, reviews }: AppScreenProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
