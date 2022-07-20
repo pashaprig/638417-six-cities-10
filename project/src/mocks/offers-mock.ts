@@ -1,5 +1,7 @@
 import { Offers } from '../types/offer';
 
+const AVATAR_URL = 'https://i.pravatar.cc/128';
+
 export const offers: Offers = [
   {
     'city': {
@@ -45,7 +47,7 @@ export const offers: Offers = [
       'id': 25,
       'name': 'Angelina',
       'isPro': true,
-      'avatarUrl': 'img/avatar-angelina.jpg'
+      'avatarUrl': `${AVATAR_URL}?rnd=${Math.random()}`
     },
     'description': 'Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.',
     'location': {
@@ -97,7 +99,7 @@ export const offers: Offers = [
       'id': 25,
       'name': 'Angelina',
       'isPro': true,
-      'avatarUrl': 'img/avatar-angelina.jpg'
+      'avatarUrl': `${AVATAR_URL}?rnd=${Math.random()}`
     },
     'description': 'Relax, rejuvenate and unplug in this ultimate rustic getaway experience in the country. In our beautiful screened Pondhouse, you can gaze at the stars and listen to the sounds of nature from your cozy warm bed.',
     'location': {
@@ -135,7 +137,7 @@ export const offers: Offers = [
     ],
     'title': 'Nice, cozy, warm big bed apartment',
     'isFavorite': false,
-    'isPremium': false,
+    'isPremium': true,
     'rating': 3,
     'type': 'house',
     'bedrooms': 4,
@@ -155,7 +157,7 @@ export const offers: Offers = [
       'id': 25,
       'name': 'Angelina',
       'isPro': true,
-      'avatarUrl': 'img/avatar-angelina.jpg'
+      'avatarUrl': `${AVATAR_URL}?rnd=${Math.random()}`
     },
     'description': 'Discover daily local life in city center, friendly neighborhood, clandestine casino, karaoke, old-style artisans, art gallery and artist studio downstairs.',
     'location': {
@@ -192,7 +194,7 @@ export const offers: Offers = [
       'https://10.react.pages.academy/static/hotel/7.jpg'
     ],
     'title': 'Loft Studio in the Central Area',
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': false,
     'rating': 3.7,
     'type': 'house',
@@ -214,7 +216,7 @@ export const offers: Offers = [
       'id': 25,
       'name': 'Angelina',
       'isPro': true,
-      'avatarUrl': 'img/avatar-angelina.jpg'
+      'avatarUrl': `${AVATAR_URL}?rnd=${Math.random()}`
     },
     'description': 'Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.',
     'location': {
