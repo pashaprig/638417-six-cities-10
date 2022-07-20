@@ -93,7 +93,7 @@ function MainScreen({ favoritesCount, offers }: MainProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <Card offer={offers[0]}/>
+                <Card offer={offers[0]}/> {/* как вкинуть в карточку первій єлемент массива с оферами? */}
               </div>
             </section>
             <div className="cities__right-section">
