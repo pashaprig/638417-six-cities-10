@@ -1,6 +1,6 @@
 import Card from '../../components/card/card';
 import Logo from '../../components/logo/logo';
-import { FavoritesProps } from '../../types';
+import { FavoritesProps } from '../../types/types';
 
 function MainScreen({ favoritesCount }: FavoritesProps): JSX.Element {
   return (

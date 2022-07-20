@@ -5,7 +5,7 @@ import LoginScreen from '../../pages/login-screen/login-screen';
 import MainScreen from '../../pages/main-screen/main-screen';
 import NotFoundScreen from '../../pages/not-found-screen/not-found-screen';
 import RoomScreen from '../../pages/room-screen/room-screen';
-import { FavoritesProps } from '../../types';
+import { FavoritesProps } from '../../types/types';
 import PrivateRoute from '../private-route/private-route';
 
 function App({ favoritesCount }: FavoritesProps): JSX.Element {
