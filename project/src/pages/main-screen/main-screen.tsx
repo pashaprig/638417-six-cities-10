@@ -1,11 +1,9 @@
 import Card from '../../components/card/card';
 import Logo from '../../components/logo/logo';
-import { Offer } from '../../types/offer';
 import { MainProps } from '../../types/types';
 
 function MainScreen({ favoritesCount, offers }: MainProps): JSX.Element {
-  const offer: Offer = offers[0];
-  console.log(offer);
+
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -93,7 +91,7 @@ function MainScreen({ favoritesCount, offers }: MainProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <Card offer={offers[0]}/> {/* как вкинуть в карточку первій єлемент массива с оферами? */}
+                <Card info={offers[0]} /> {/* как вкинуть в карточку первій єлемент массива с оферами? */}
               </div>
             </section>
             <div className="cities__right-section">
