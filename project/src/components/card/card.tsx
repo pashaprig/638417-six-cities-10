@@ -6,7 +6,7 @@ type CardProps = {
 
 function Card({ offer }: CardProps): JSX.Element {
   return (
-    <article key={offer.id} className="cities__card place-card">
+    <article className="cities__card place-card">
       {offer.isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ''}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href={`offer/${ offer.id }`}>

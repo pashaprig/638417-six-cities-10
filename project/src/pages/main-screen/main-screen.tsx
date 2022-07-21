@@ -1,4 +1,4 @@
-import Card from '../../components/card/card';
+import CardList from '../../components/card-list/card-list';
 import Logo from '../../components/logo/logo';
 import { MainProps } from '../../types/types';
 
@@ -90,9 +90,7 @@ function MainScreen({ favoritesCount, offers }: MainProps): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                <Card offer={offers[0]} /> {/* как вкинуть в карточку первій єлемент массива с оферами? */}
-              </div>
+              <CardList offers={offers} />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map" />
