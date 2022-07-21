@@ -1,6 +1,11 @@
 import CardList from '../../components/card-list/card-list';
 import Logo from '../../components/logo/logo';
-import { MainProps } from '../../types/types';
+import { Offers } from '../../types/offer';
+
+export type MainProps = {
+  favoritesCount: number;
+  offers: Offers;
+};
 
 function MainScreen({ favoritesCount, offers }: MainProps): JSX.Element {
 
