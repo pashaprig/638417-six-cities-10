@@ -1,12 +1,13 @@
 import { Offer } from '../../types/offer';
 
 type CardProps = {
-  offer: Offer
+  offer: Offer;
+  onMouseOverHandler: () => void;
 }
 
-function Card({ offer }: CardProps): JSX.Element {
+function Card({ offer, onMouseOverHandler }: CardProps): JSX.Element {
   return (
-    <article className="cities__card place-card">
+    <article className="cities__card place-card" onMouseOver={onMouseOverHandler}>
       {offer.isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ''}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href={`offer/${ offer.id }`}>
@@ -19,7 +20,7 @@ function Card({ offer }: CardProps): JSX.Element {
             <b className="place-card__price-value">€{offer.price}</b>
             <span className="place-card__price-text">/&nbsp;night</span>
           </div>
-          <button className={offer.isFavorite ? 'place-card__bookmark-button--active button' : 'place-card__bookmark-button button'} type="button">
+          <button className={`${offer.isFavorite ? 'place-card__bookmark-button--active' : 'place-card__bookmark-button'} button`} type="button">
             <svg className="place-card__bookmark-icon" width={18} height={19}>
               <use xlinkHref="#icon-bookmark" />
             </svg>
