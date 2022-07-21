@@ -30,8 +30,8 @@ export const offers: Offers = [
       'https://10.react.pages.academy/static/hotel/19.jpg'
     ],
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'isFavorite': false,
-    'isPremium': false,
+    'isFavorite': true,
+    'isPremium': true,
     'rating': 4.1,
     'type': 'hotel',
     'bedrooms': 2,
