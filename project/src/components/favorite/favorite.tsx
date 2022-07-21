@@ -1,20 +1,19 @@
 import { Offer } from '../../types/offer';
 
-type CardProps = {
+type FavoriteProps = {
   offer: Offer;
-  onMouseOverHandler: () => void;
 }
 
-function Card({ offer, onMouseOverHandler }: CardProps): JSX.Element {
+function Favorite({ offer }: FavoriteProps): JSX.Element {
   return (
-    <article className="cities__card place-card" onMouseOver={onMouseOverHandler}>
+    <article className="favorites__card place-card">
       {offer.isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ''}
-      <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href={`offer/${ offer.id }`}>
-          <img className="place-card__image" src={offer.previewImage} width={260} height={200} alt={`${offer.type} in ${offer.city.name}`} />
+      <div className="favorites__image-wrapper place-card__image-wrapper">
+        <a href={`offer/${offer.id}`}>
+          <img className="place-card__image" src={offer.previewImage} width={150} height={110} alt={`${offer.type} in ${offer.city.name}`} />
         </a>
       </div>
-      <div className="place-card__info">
+      <div className="favorites__card-info place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
             <b className="place-card__price-value">€{offer.price}</b>
@@ -24,7 +23,7 @@ function Card({ offer, onMouseOverHandler }: CardProps): JSX.Element {
             <svg className="place-card__bookmark-icon" width={18} height={19}>
               <use xlinkHref="#icon-bookmark" />
             </svg>
-            <span className="visually-hidden">To bookmarks</span>
+            <span className="visually-hidden">In bookmarks</span>
           </button>
         </div>
         <div className="place-card__rating rating">
@@ -34,7 +33,7 @@ function Card({ offer, onMouseOverHandler }: CardProps): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href={`offer/${ offer.id }`}>{offer.title}</a>
+          <a href={`offer/${offer.id}`}>{offer.title}</a>
         </h2>
         <p className="place-card__type">{offer.type}</p>
       </div>
@@ -42,4 +41,4 @@ function Card({ offer, onMouseOverHandler }: CardProps): JSX.Element {
   );
 }
 
-export default Card;
+export default Favorite;
