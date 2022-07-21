@@ -49,7 +49,7 @@ function FavoritesScreen({offers}: FavoriteProps): JSX.Element {
             <ul className="favorites__list">
               <li className="favorites__locations-items">
                 <div className="favorites__locations locations locations--current">
-                  <div className="locations__item">
+                  <div className="locations__item"> {/*Как сгрупировать по городам?*/}
                     <a className="locations__item-link" href="#">
                       <span>Amsterdam</span>
                     </a>
