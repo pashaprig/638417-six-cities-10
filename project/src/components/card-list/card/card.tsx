@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Offer } from '../../../types/offer';
 
 type CardProps = {
@@ -10,9 +11,9 @@ function Card({ offer, onMouseOverHandler }: CardProps): JSX.Element {
     <article className="cities__card place-card" onMouseOver={onMouseOverHandler}>
       {offer.isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ''}
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href={`offer/${offer.id}`}>
+        <Link to={`/offer/${offer.id}`}>
           <img className="place-card__image" src={offer.previewImage} width={260} height={200} alt={`${offer.type} in ${offer.city.name}`} />
-        </a>
+        </Link>
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
@@ -34,7 +35,7 @@ function Card({ offer, onMouseOverHandler }: CardProps): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href={`offer/${offer.id}`}>{offer.title}</a>
+          <Link to={`/offer/${offer.id}`}>{offer.title}</Link>
         </h2>
         <p className="place-card__type">{offer.type}</p>
       </div>

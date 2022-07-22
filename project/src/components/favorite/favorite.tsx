@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Offer } from '../../types/offer';
 
 type FavoriteProps = {
@@ -9,9 +10,9 @@ function Favorite({ offer }: FavoriteProps): JSX.Element {
     <article className="favorites__card place-card">
       {offer.isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ''}
       <div className="favorites__image-wrapper place-card__image-wrapper">
-        <a href={`offer/${offer.id}`}>
+        <Link to={`/offer/${offer.id}`}>
           <img className="place-card__image" src={offer.previewImage} width={150} height={110} alt={`${offer.type} in ${offer.city.name}`} />
-        </a>
+        </Link>
       </div>
       <div className="favorites__card-info place-card__info">
         <div className="place-card__price-wrapper">
@@ -33,7 +34,7 @@ function Favorite({ offer }: FavoriteProps): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href={`offer/${offer.id}`}>{offer.title}</a>
+          <Link to={`/offer/${offer.id}`}>{offer.title}</Link>
         </h2>
         <p className="place-card__type">{offer.type}</p>
       </div>

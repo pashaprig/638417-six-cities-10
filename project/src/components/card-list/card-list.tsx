@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ZERO_ID } from '../../consts';
 import { Offers } from '../../types/offer';
 import Card from './card/card';
 
@@ -7,7 +8,7 @@ type CardListProps = {
 }
 
 function CardList({ offers }: CardListProps): JSX.Element {
-  const [ativeId, setActiveId] = useState(0);
+  const [ativeId, setActiveId] = useState(ZERO_ID);
   return (
     <div className="cities__places-list places__list tabs__content" id={String(ativeId)}>
       {

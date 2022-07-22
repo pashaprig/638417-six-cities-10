@@ -1,3 +1,5 @@
+export const ZERO_ID = 0;
+
 export const Setting = {
   FAVORITES_COUNT: 9,
 };
