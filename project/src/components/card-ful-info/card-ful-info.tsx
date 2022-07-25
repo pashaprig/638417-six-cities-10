@@ -1,12 +1,23 @@
-import { Offer } from '../../types/offer';
+import { useParams } from 'react-router-dom';
+import { Offer, Offers } from '../../types/offer';
 import Gallery from './gallery/gallery';
 import Goods from './goods/goods';
 
 type CardFulInfoProps = {
-  offer: Offer;
+  offers: Offers;
 }
 
-function CardFulInfo({ offer }: CardFulInfoProps): JSX.Element {
+type OfferItemParams = {
+  id: string;
+}
+
+function CardFulInfo({ offers }: CardFulInfoProps): JSX.Element {
+
+  const params = useParams<keyof OfferItemParams>() as OfferItemParams;
+  const {id} = params;
+  const numberId = parseInt(id, 10);
+  const offer = offers.find((card) => card.id === numberId ) as Offer;
+
   return (
     <section className="property">
       <div className="property__gallery-container container">

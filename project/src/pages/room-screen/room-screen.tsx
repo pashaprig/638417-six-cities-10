@@ -32,7 +32,7 @@ function RoomScreen(): JSX.Element {
         </div>
       </header>
       <main className="page__main page__main--property">
-        <CardFulInfo offer={offers[0]}/> {/*Подскажи плз как сюда вкинуть нужный оффер из массива, понятно что нжно отфильтровать по айдишнику, но как его снять после перехода по Link?*/}
+        <CardFulInfo offers={offers} /> {/*Подскажи плз как сюда вкинуть нужный оффер из массива, понятно что нжно отфильтровать по айдишнику, но как его снять после перехода по Link?*/}
         <div className="container">
           <section className="near-places places">
             <h2 className="near-places__title">Other places in the neighbourhood</h2>
