@@ -15,8 +15,6 @@ function NewCommentForm(): JSX.Element {
 
   function onSubmitHandler(evt: FormEvent) {
     evt.preventDefault();
-    console.log('submit');
-    console.log(formData);
   }
 
   return (
