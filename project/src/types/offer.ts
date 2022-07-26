@@ -1,3 +1,4 @@
+import { offers } from './../mocks/offers-mock';
 export type City = {
   location: {
     latitude: number;
@@ -41,3 +42,10 @@ export type Offer = {
 };
 
 export type Offers = Offer[];
+
+export type FavoriteOffer = {
+  name: string;
+  offers: Offers;
+}
+
+export type FavoriteOffers = FavoriteOffer[];

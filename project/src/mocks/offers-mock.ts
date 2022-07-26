@@ -59,7 +59,7 @@ export const offers: Offers = [
   },
   {
     'city': {
-      'name': 'Paris',
+      'name': 'Dusseldorf',
       'location': {
         'latitude': 48.85661,
         'longitude': 2.351499,
@@ -84,7 +84,7 @@ export const offers: Offers = [
       'https://10.react.pages.academy/static/hotel/4.jpg'
     ],
     'title': 'Nice, cozy, warm big bed apartment',
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': false,
     'rating': 2.3,
     'type': 'house',
