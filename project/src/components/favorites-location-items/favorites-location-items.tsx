@@ -1,5 +1,5 @@
 import { FavoriteOffers } from '../../types/offer';
-import Favorite from '../favorite/favorite';
+import Favorite from './favorite/favorite';
 
 type FavoritesLocationItemProps = {
   favoriteOffers: FavoriteOffers;

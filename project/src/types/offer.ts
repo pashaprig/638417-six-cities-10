@@ -1,4 +1,3 @@
-import { offers } from './../mocks/offers-mock';
 export type City = {
   location: {
     latitude: number;
