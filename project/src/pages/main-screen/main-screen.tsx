@@ -1,8 +1,14 @@
-import Card from '../../components/card/card';
+import CardList from '../../components/card-list/card-list';
 import Logo from '../../components/logo/logo';
-import { FavoritesProps } from '../../types';
+import { Offers } from '../../types/offer';
 
-function MainScreen({ favoritesCount }: FavoritesProps): JSX.Element {
+export type MainProps = {
+  favoritesCount: number;
+  offers: Offers;
+};
+
+function MainScreen({ favoritesCount, offers }: MainProps): JSX.Element {
+
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -82,20 +88,14 @@ function MainScreen({ favoritesCount }: FavoritesProps): JSX.Element {
                     <use xlinkHref="#icon-arrow-select" />
                   </svg>
                 </span>
-                <ul className="places__options places__options--custom places__options--opened">
+                <ul className="places__options places__options--custom places__options--closed">
                   <li className="places__option places__option--active" tabIndex={0}>Popular</li>
                   <li className="places__option" tabIndex={0}>Price: low to high</li>
                   <li className="places__option" tabIndex={0}>Price: high to low</li>
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-              </div>
+              <CardList offers={offers} />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map" />
