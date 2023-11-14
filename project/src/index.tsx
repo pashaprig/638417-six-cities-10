@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
-import { Setting } from './consts';
-import { offers } from './mocks/offers-mock';
-import { reviews } from './mocks/review-mock';
+
+const Settings = {
+  FAVORITE_COUNT: 5
+};
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -11,10 +12,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App
-      favoritesCount = {Setting.FAVORITES_COUNT}
-      offers = {offers}
-      reviews = {reviews}
-    />
+    <App favoriteCount={Settings.FAVORITE_COUNT} />
   </React.StrictMode>,
 );
